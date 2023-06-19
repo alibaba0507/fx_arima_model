@@ -26,8 +26,8 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.svm import SVR
 from sklearn.preprocessing import MinMaxScaler
-from keras.models import Sequential
-from keras.layers import LSTM, Dense
+#from keras.models import Sequential
+#from keras.layers import LSTM, Dense
 import statsmodels.api as sm
 import itertools
 from sklearn.metrics import mean_absolute_error
