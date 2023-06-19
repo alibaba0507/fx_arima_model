@@ -1,0 +1,22 @@
+name: Cron Job
+
+on:
+  schedule:
+    - cron: "0 */2 * * 1-5" # Runs at 8:00 AM UTC. Adjust the cron schedule as needed.
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x # Specify the desired Python version
+
+      - name: Run Python script
+        run: |
+          python arima_model_predict_fx.py
