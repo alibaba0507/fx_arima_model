@@ -42,7 +42,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 import matplotlib.pyplot as plt
-import ast
+#import ast
 
 def get_data(symbol,start = "",end = "",period="", interval=""):
     """Get historical stock prices for the given symbol"""
