@@ -17,7 +17,7 @@ Original file is located at
 !pip install --upgrade tensorflow scikit-learn
 
 !pip install pyopenssl
-!pip install pandas_ta
+
 
 import numpy as np
 import pandas as pd
@@ -31,7 +31,7 @@ from keras.layers import LSTM, Dense
 import statsmodels.api as sm
 import itertools
 from sklearn.metrics import mean_absolute_error
-
+!pip install pandas_ta
 import pandas_ta as ta
 
 import yfinance as yf
