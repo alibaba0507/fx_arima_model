@@ -1,0 +1,11 @@
+pip install statsmodels  # Add any other required dependencies
+pip install yfinance
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install sklearn
+pip install keras
+pip install --upgrade tensorflow
+pip install --upgrade tensorflow scikit-learn
+pip install pyopenssl
+pip install pandas_ta
