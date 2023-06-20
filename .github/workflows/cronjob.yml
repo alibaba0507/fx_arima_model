@@ -21,6 +21,11 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.x # Specify the desired Python version
+      - name: Clone repository
+        run: |
+          git clone https://github.com/alibaba0507/fx_arima_model.git  # Replace with your GitHub repository URL
+          cd fx_arima_model  # Replace with the cloned repository directory
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -29,4 +34,4 @@ jobs:
         id: find-jupyter
         run: echo "::set-output name=path::$(which jupyter)"
       - name: Run the Colab notebook
-        run:  ${{ steps.find-jupyter.outputs.path }} jupyter nbconvert --execute ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
+        run:  ${{ steps.find-jupyter.outputs.path }} nbconvert --execute ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
