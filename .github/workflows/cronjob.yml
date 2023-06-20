@@ -17,15 +17,18 @@ jobs:
         with:
           node-version: 16.x
           
-      - name: Install Python 3.11 kernel
-        run: |
-          python -m ipykernel install --name python3.11 --display-name "Python 3.11"
-          
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: 3.x # Specify the desired Python version
-
+          
+      - name: Install ipykernel
+        run: python -m pip install ipykernel
+        
+      - name: Install Python 3.11 kernel
+        run: |
+          python -m ipykernel install --name python3.11 --display-name "Python 3.11"
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
