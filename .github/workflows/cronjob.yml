@@ -2,7 +2,7 @@ name: Cron Job
 
 on:
   schedule:
-    - cron: "0 */3 * * 1-5" # Runs at 8:00 AM UTC. Adjust the cron schedule as needed.
+    - cron: "*/15 * * * 1-5" # Runs at 8:00 AM UTC. Adjust the cron schedule as needed.
 
 jobs:
   run_script:
@@ -24,17 +24,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install statsmodels  # Add any other required dependencies
-          pip install yfinance
-          pip install pandas
-          pip install numpy
-          pip install matplotlib
-          pip install sklearn
-          pip install keras
-          pip install --upgrade tensorflow
-          pip install --upgrade tensorflow scikit-learn
-          pip install pyopenssl
-          pip install pandas_ta
-      - name: Run Python script
-        run: |
-          python arima_model_predict_fx.py
+          
+      - name: Run the Colab notebook
+        run: jupyter nbconvert --execute ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
