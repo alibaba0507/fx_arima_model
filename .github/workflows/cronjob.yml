@@ -34,5 +34,5 @@ jobs:
           
       - name: Run the Colab notebook
         run: |
-          $JUPYTER_PATH nbconvert --execute --to html --ExecutePreprocessor.kernel_name=python3 ARIMA_Model_Predict_FX.ipynb
+          $JUPYTER_PATH nbconvert --execute --to html --ExecutePreprocessor.kernel_name=python3.11.4 ARIMA_Model_Predict_FX.ipynb
         
