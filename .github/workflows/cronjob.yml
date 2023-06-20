@@ -26,6 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install nbconvert
       - name: Find jupyter path
-        run: which jupyter
+        id: find-jupyter
+        run: echo "::set-output name=path::$(which jupyter)"
       - name: Run the Colab notebook
-        run: jupyter nbconvert --execute ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
+        run:  ${{ steps.find-jupyter.outputs.path }} jupyter nbconvert --execute ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
