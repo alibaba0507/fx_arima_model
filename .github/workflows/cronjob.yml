@@ -21,12 +21,6 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.x # Specify the desired Python version
-      - name: Clone repository
-        run: |
-          git config --global user.name "alibaba0507"
-          git config --global user.email "alibaba0507@gmail.com"
-          git clone fx_arima_model.git  # Replace with your GitHub repository URL
-          cd fx_arima_model  # Replace with the cloned repository directory
 
       - name: Install dependencies
         run: |
