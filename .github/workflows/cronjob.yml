@@ -27,7 +27,7 @@ jobs:
         
       - name: Install Python 3.11 kernel
         run: |
-          python -m ipykernel install --name python3.11 --display-name "Python 3.11"
+          python -m ipykernel install --name python3.11 --display-name "Python 3.11" --user
           
       - name: Install dependencies
         run: |
