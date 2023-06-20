@@ -30,6 +30,7 @@ jobs:
       - name: Find Jupyter path
         id: find-jupyter
         run: |
-          echo "::set-env name=JUPYTER_PATH::$(which jupyter)"
+          echo "JUPYTER_PATH=$(which jupyter)" >> $GITHUB_ENV
+          
       - name: Run the Colab notebook
-        run:  ${{ env.JUPYTER_PATH }} nbconvert --execute --to html ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
+        run:  $JUPYTER_PATH nbconvert --execute --to html ARIMA_Model_Predict_FX.ipynb  # Replace with the actual name of your Colab notebook file
