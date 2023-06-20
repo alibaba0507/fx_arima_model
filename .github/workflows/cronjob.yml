@@ -25,7 +25,7 @@ jobs:
         run: |
           git config --global user.name "alibaba0507"
           git config --global user.email "alibaba0507@gmail.com"
-          git clone https://github.com/alibaba0507/fx_arima_model.git  # Replace with your GitHub repository URL
+          git clone fx_arima_model.git  # Replace with your GitHub repository URL
           cd fx_arima_model  # Replace with the cloned repository directory
 
       - name: Install dependencies
